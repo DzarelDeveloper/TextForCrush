@@ -1,0 +1,80 @@
+#soup-nav {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 32px;
+  z-index: 9002;
+  font-size: 64px;
+  cursor: pointer;
+}
+
+.soup-title {
+  font-size: 32px;
+}
+
+.soup-desc {
+  font-size: 16px;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #eee;
+  color: #111;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  overflow: hidden;
+}
+
+#soup-container {
+  width: 100%;
+  height: 100%;
+  min-width: 320px;
+  min-height: 480px;
+  position: relative;
+}
+
+.letters-wrap {
+  position: absolute;
+  overflow: hidden;
+  display: inline-block;
+}
+.letters-wrap.mutable {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.letters-wrap.mutable .letter {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: left 2s, top 2s, color 2s;
+  color: "#AAA";
+}
+.letters-wrap.mutable .letter.active {
+  color: "#111";
+  z-index: 9001;
+}
+.letters-wrap.position-data {
+  top: 50%;
+  left: 50%;
+
+  visibility: hidden;
+  transform: translate(-50%, -50%);
+}
+
+.segment {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+button {
+  z-index: 9001;
+  position: relative;
+  cursor: pointer;
+}
